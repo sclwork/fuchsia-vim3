@@ -25,8 +25,12 @@ echo "have_firmware = false" > zircon/prebuilt/config.gni
 ```
 
 - #### 编译[Fuchsia源码](https://fuchsia.dev/fuchsia-src/get-started/build_fuchsia)
+
+> // If you forgot to --with-base the devtools:<br/>
+> // error: 2 (/boot/bin/sh: 1: Cannot create child process: -1 (ZX_ERR_INTERNAL):<br/>
+> // failed to resolve fuchsia-pkg://fuchsia.com/ls#bin/ls
 ```
-fx set workstation.vim3
+fx set core.vim3 --with-base //bundles:tools
 fx build -j32
 ```
 
